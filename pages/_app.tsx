@@ -5,7 +5,7 @@ import { RecoilRoot } from 'recoil';
 import { useEffect, useState } from 'react';
 import Footer from 'components/Layouts/Footer';
 import { CookieBanner } from 'components/Layouts/CookieBanner';
-import { getCookie } from 'public/functions/cookie';
+import { getCookie } from 'public/functions/cookieProvider';
 // import { firebase } from 'global/firebase';
 
 function MyApp({ Component, pageProps }: AppProps) {
