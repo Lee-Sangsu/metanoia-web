@@ -6,7 +6,7 @@ import NextBtn from 'components/Methodologies/NextBtn';
 import Footer from 'components/Layouts/Footer';
 import React, { RefObject, useEffect, useLayoutEffect, useRef, useState } from 'react';
 import { useRecoilValue } from 'recoil';
-import { LifeValueState } from 'states/Methodologies/LifeValueState';
+import { LifeValueState } from 'public/states/Methodologies/LifeValueState';
 
 const WheelOfLife: NextPage = () => {
     const values = useRecoilValue(LifeValueState);  

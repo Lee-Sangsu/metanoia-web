@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useRecoilState } from "recoil";
-import { LifeValueState } from "states/Methodologies/LifeValueState";
+import { LifeValueState } from "public/states/Methodologies/LifeValueState";
 
 
 export const ValueBubble = ({key, value, styles}: any) => {   

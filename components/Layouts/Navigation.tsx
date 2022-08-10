@@ -2,7 +2,7 @@ import { NextPage } from "next";
 import Link from "next/link";
 import Image from "next/image";
 import styles from 'styles/Home.module.css';
-import { gettingAuth } from "states/firebase";
+import { gettingAuth } from "public/states/firebase";
 
 export const Navigation: NextPage = ( ) => {
     // const user = null;
