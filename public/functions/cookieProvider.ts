@@ -21,7 +21,7 @@ export function setCookie(cname:string, cvalue:string, exdays:number) {
     window.document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
 };
 
-export function getAllCookies() {
+export default function getAllCookies() {
   return window.document.cookie.split(";");
   /*.reduce((cookieObj:object, cookie) => {
     const [name, val]:string[] = cookie.split('=').map(c => c.trim());
@@ -31,7 +31,7 @@ export function getAllCookies() {
 */
 }
 
-export function removeAllCookies() {
+export function removeAllCookies(): void {
   const cookies = getAllCookies();
   cookies.forEach((c) => { 
       window.document.cookie = c.replace(/^ +/, "").replace(
