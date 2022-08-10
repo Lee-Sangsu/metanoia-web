@@ -1,4 +1,4 @@
-import { getAllCookies, getCookie, removeAllCookies, setCookie } from "public/functions/cookie";
+import { getAllCookies, removeAllCookies, setCookie } from "public/functions/cookie";
 import Image from "next/image";
 import Link from "next/link";
 import styles from "public/static/css/cookie-banner.module.css";
