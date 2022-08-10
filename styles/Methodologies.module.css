@@ -1,0 +1,253 @@
+.main {
+    min-height: calc(100vh - 56px);
+    padding: 0 16px 0 16px;
+    width: 100vw;
+    flex: 1;
+}
+
+.h1 {
+    margin-block: 16px 0;
+    width: calc(100vw - 32px);
+}
+
+.h3 {
+    width: 100%;
+    text-align: center;
+    margin-block: 16px 0;
+}
+
+.addevent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 20%;
+
+}
+
+.addeventlabel {
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    margin-top: 4px;
+    font-size: 12px;
+    line-height: 16px;
+    width: fit-content;
+    height: 16px;
+    align-items: center;
+    text-align: center;
+    letter-spacing: 0.5px;
+}
+
+.middleh6 {
+    width: 100%;
+    text-align: center;
+    padding-top: 10px;
+    color: var(--tertiary-light);
+    margin-block: 0;
+}
+
+.lefth6 {
+    padding-top: 10px;
+    width: 75%;
+    margin-block: 0;
+    color: var(--tertiary-light);
+}
+
+.activity {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: calc(100vw - 32px);
+    margin: 8px 0;
+}
+
+.valuecontainer{
+    display: flex;
+    flex-direction: row;
+    overflow-x: scroll;
+    margin-top: 48px;
+    align-items: center;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+}
+
+.values {
+    border-radius: 40px;
+    margin-right: 32px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--secondary-light);
+    width: 50vw;
+    min-width: 180px;
+    height: 25vw;
+}
+/* first child effect when the card comes to right */
+.values:first-child{
+    min-width: 270px;
+    width: 70vw;
+    height: 35vw;
+}
+
+.values h1 {
+    margin-block: 0;
+}
+
+.modal {
+    width: 100vw;
+    height: calc(100vh - 72px);
+    display: flex;
+    flex-direction: column;
+    /* bottom: calc(72px - 100vh); */
+    position: absolute;
+    background: #ffffff;
+    border-radius: 16px 16px 0px 0px;
+    scroll-behavior: smooth;
+    z-index: 3;
+    transition: all 0.7s ease-in-out;
+    overflow-y: scroll;
+}
+
+.modalhead {
+    background: #EFDCF6;
+    border-radius: 16px 16px 0px 0px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    height: 48px;
+}
+
+.closebtn {
+    width: 32px;
+    height: 32px;
+    margin: 8px;
+    background: none;
+    padding: 4px;
+    border: none;
+}
+
+.savebtn {
+    width: 72px;
+    height: 30px;
+    background: #FFDED2;
+    margin-top: 9px;
+    margin-right: 8px;
+
+    border: 1.5px solid #392A3F;
+    border-radius: 8px;
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    letter-spacing: 0.5px;
+    color: #502D1F;
+}
+
+.titleinput {
+    border: solid #E5E2E1;
+    margin-top: 16px;
+    border-width: 0 0 2px 0;
+    font-family: 'Roboto Slab', serif;
+    font-weight: 400;
+    font-size: 34px;
+    line-height: 40px;
+    margin-left: 10%;
+    width: 83%;
+    color: black;
+    padding: 8px 4px;
+    gap: 10px;
+}
+
+.titleinput::placeholder{
+    color: #7D5260;
+}
+
+.titleinput:focus-visible {
+    outline: none;
+    /* outline: -webkit-focus-ring-color auto 1px; */
+}
+
+.detailrow {
+    display: flex;
+    align-items: flex-end;
+    padding: 0 8px;
+    width: 100%;
+    height: 48px;
+}
+
+.detailinput {
+    /* margin-left: 8px; */
+    font-family: 'Roboto Slab';
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 18px;
+    /* identical to box height, or 133% */
+    height: inherit;
+    display: flex;
+    align-items: center;
+    letter-spacing: 0.4px;
+    border: solid #E5E2E1;
+    border-width: 0 0 2px 0;
+    width: 83vw;
+    padding: 8px 4px;
+    padding-inline-start: 8px;
+    color: black;
+}
+
+/* .detailinput:-internal-autofill-selected {
+    background-color: white;
+} */
+
+.detailinput:focus-visible {
+    outline: none;
+}
+
+.detailinput::placeholder {
+    color: #7D5260;
+    font-size: 14px;
+}
+
+.description {
+    display: flex;
+    align-items: flex-end;
+    padding: 0 8px;
+    width: 100%;
+    height: 72px;   
+}
+
+.canvas {
+    margin: 16px 0;
+    width: calc(100vw - 32px);
+    height: calc(100vh - 357px);
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 16px;
+    grid-auto-rows: minmax(32px, auto);
+}
+
+.valuecircle {
+    background: #7C8B84;
+    width: 104px;
+    height: 104px;
+    /* Value Circle 2 */
+    box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.3), -1px 2px 3px rgba(0, 0, 0, 0.3);
+    border-radius: 108px;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
+    /* identical to box height, or 143% */
+    text-align: center;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    letter-spacing: 0.1px;
+
+    color: #FFFFFF;
+}
