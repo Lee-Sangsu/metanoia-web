@@ -5,7 +5,7 @@ import SEO from 'components/SEO';
 import NextBtn from 'components/Methodologies/NextBtn';
 import Footer from 'components/Layouts/Footer';
 // import { Engine, Render, Runner, Bodies, Composite} from 'matter-js';
-import { shuffledValues } from 'public/functions/methodologies/values';
+import { shuffledValues } from 'public/providers/methodologies/values';
 import { useSetRecoilState, useRecoilState } from 'recoil';
 import { LifeValueState } from 'public/states/Methodologies/LifeValueState';
 import { ValueBubble } from 'components/Methodologies/ValueBubble';
