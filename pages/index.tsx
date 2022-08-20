@@ -44,6 +44,7 @@ const Home: NextPage = () => {
   )
 }
 
+/*
 Home.getInitialProps = async function() {
   const domain:string = "";
   const response = await fetch(`https://${domain}/public-api/products`);
@@ -51,5 +52,6 @@ Home.getInitialProps = async function() {
   const result = await response.json();
   return { productData: result.data }
 };
+*/
 
 export default Home

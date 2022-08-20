@@ -11,6 +11,7 @@ import { LifeValueState } from 'public/states/Methodologies/LifeValueState';
 const WheelOfLife: NextPage = () => {
     const values = useRecoilValue(LifeValueState);  
     const [valueIndex, setValueIndex] = useState(0);
+    const [gauge, setGauge] = useState(0);
     // console.log(values);
 
     const valueContainerRef = useRef<HTMLUListElement>(null);
@@ -51,6 +52,7 @@ const WheelOfLife: NextPage = () => {
                     <button name="left-btn" onClick={scrollValue} className={styles.slider}>left</button>
                     <button name="right-btn" onClick={scrollValue} className={styles.slider}>right</button>
                 </div>
+                <input type="range" value={gauge} onChange={(event) => setGauge(parseInt(event?.currentTarget.value))} min={0} max={10} />
                 {/* <div ref={boxRef}>
                 <canvas ref={canvasRef} className={styles.canvas}></canvas>
                 </div> */}
