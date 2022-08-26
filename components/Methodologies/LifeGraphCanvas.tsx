@@ -15,6 +15,7 @@ export default function LifeGraphCanvas() {
         ctx.lineTo(16, height - 24);
         // Draw Width Line
         ctx.lineWidth = 6;  // used for all paths
+        ctx.setLineDash([4, 8, 12, 16]); // Not sure, try it out
         ctx.moveTo(16, (height / 2)-24);
         ctx.lineTo((width-16), (height/2)-24);
         ctx.setTransform(1, 0, 0, 1, 0, 0);

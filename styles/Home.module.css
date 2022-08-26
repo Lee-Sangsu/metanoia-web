@@ -156,8 +156,7 @@
     align-items: center;
     justify-content: flex-start;
     padding-top: 55px;
-    background-image: url("/static/images/index-mobile-bg.svg");
-    background-color: #ffffff;
+    background: #ffffff url("/static/images/index-mobile-bg.svg") right/cover no-repeat;
   }
   .ctasecondary {
     z-index: 2;

@@ -17,8 +17,6 @@ const LifeGraph: NextPage = () => {
   const [lifeEvent, setLifeEvent] = useState({
     title: "",
     time:  `${timeNow.getFullYear()}-${mm<10 ? '0'+mm : mm}`, 
-    location: "", 
-    public: false, 
     description: ""
   });
 
@@ -44,16 +42,6 @@ const LifeGraph: NextPage = () => {
 
         <NextBtn to="/value-card" />
       </main>
-
-      <footer className={styles.footer}>
-        <a
-          href="https://merakiteam.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '} Meraki Team Company
-        </a>
-      </footer>
     </div>
     </>
   )
