@@ -1,8 +1,17 @@
 import Image from 'next/image'
 import React, { useRef, useEffect } from 'react'
+import ColourArray from './ColourArray';
 
 export default function AddNewLifeEvent({lifeEvent, setLifeEvent, styles, modal, setModal}:any) {
-    const colourArray = ["red", "yellow", "blue", "green", "grey", "azure", ""];
+    const [eventColour, setEventColour] = React.useState('#7C8B84');
+
+    const colourSelection = (event: React.MouseEvent<HTMLLIElement>) => {
+        event.preventDefault();
+
+        console.log(event.currentTarget.style.color);
+        setEventColour(event.currentTarget.style.backgroundColor);
+    };
+
     const onLifeEventChange = (event: React.ChangeEvent<HTMLInputElement>) => {
         event.preventDefault();
 
@@ -23,7 +32,7 @@ export default function AddNewLifeEvent({lifeEvent, setLifeEvent, styles, modal,
         }}>
             <div className={styles.modalhead}> 
                 <button className={styles.closebtn} onClick={() => setModal(false)}>
-                    <Image src="/static/images/close.svg" width="24px" height="24px" alt="See my life path again" />
+                    <Image src="/static/images/close.svg" width="24px" height="24px" alt="Cancel adding the new event" />
                 </button>
                 <button className={styles.savebtn} onClick={() => console.log("Items!")}>Save</button>
             </div>
@@ -38,10 +47,8 @@ export default function AddNewLifeEvent({lifeEvent, setLifeEvent, styles, modal,
             </div>
             
             <div className={styles.colourinput}> 
-                <h6 className={styles.colourtitle}>Which colour can you match with this event?</h6>
-                {colourArray.map((colour, index) => <circle key={index} r={20} cx={20} cy={20} style={{
-                    color: colour,
-                }} />)}
+                <h6 className={styles.colourtitle} style={{color: eventColour}}>Which colour can you match with this event?</h6>
+                <ColourArray colourSelection={colourSelection} />
             </div>
             <div className={styles.description}>
                 <span style={{height: 36, display: 'flex', alignItems: 'flex-start', padding: '6.5px 4.5px'}}>

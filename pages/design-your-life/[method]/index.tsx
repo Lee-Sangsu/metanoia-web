@@ -15,7 +15,7 @@ const LifeDesignMethod: NextPage = () => {
     
 
   return (<>
-    <SEO title='Life Design - Metanoia' description='Find the true-yourself from the following methodologies.' />
+    <SEO title='Life Design - Stact' description='Find the true-yourself from the following methodologies.' />
 
     <div className={styles.container}>
       <main className={styles.main}>

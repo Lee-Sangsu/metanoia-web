@@ -13,7 +13,7 @@ export const Navigation: NextPage = ( ) => {
         <header>
             <nav >
                 <Link href="/">
-                    <a className={styles.home}>Metanoia</a>
+                    <a className={styles.home}>Stact</a>
                 </Link>
                 <div className={styles.ndiv}>
                     {/* <Link href="/about-us">

@@ -1,23 +1,27 @@
 import { useRef, useEffect } from 'react'
+import { constSelector } from 'recoil';
 
-export default function LifeGraphCanvas() {
-    const canvasRef = useRef<HTMLCanvasElement>(null);
+export default function LifeGraphCanvas({canvasRef}:any) {
+    // const canvasRef = useRef<HTMLCanvasElement>(null);
 
-    const initialDrawing = (ctx: CanvasRenderingContext2D | null, height: number, width: number, chock: HTMLImageElement) => {
+    const initialCanvasDrawing = (ctx: CanvasRenderingContext2D | null, height: number, width: number, chock: HTMLImageElement) => {
+        // The width of canvas is 100vw.
         if (ctx === null) throw new Error('Could not get rendering context.');
         // chock.sizes.
         ctx.beginPath();
         ctx.imageSmoothingEnabled = true;
         ctx.imageSmoothingQuality = "high";
-        // Draw Column Line
+        // Draw solid column line
+        ctx.setLineDash([]);
         ctx.lineWidth = 6;  // used for all paths
         ctx.moveTo(16, 24);
         ctx.lineTo(16, height - 24);
-        // Draw Width Line
+        ctx.stroke();
+        // Draw dashed width line
         ctx.lineWidth = 6;  // used for all paths
-        ctx.setLineDash([4, 8, 12, 16]); // Not sure, try it out
+        ctx.setLineDash([4, 8, 12, 16]); 
         ctx.moveTo(16, (height / 2)-24);
-        ctx.lineTo((width-16), (height/2)-24);
+        ctx.lineTo((width)-32, (height/2)-24);
         ctx.setTransform(1, 0, 0, 1, 0, 0);
         ctx.drawImage(chock, 0, 8, 32, 36);
         ctx.stroke();
@@ -36,7 +40,7 @@ export default function LifeGraphCanvas() {
             const chock = new Image();
             chock.src = "/static/images/chock.svg";
             chock.onload = async () => {
-                await initialDrawing(context, canvas?.height, canvas?.width, chock);
+                await initialCanvasDrawing(context, canvas?.height, canvas?.width, chock);
             };
         }
     }, [canvasRef])

@@ -113,6 +113,7 @@
     background: #EFDCF6;
     border-radius: 16px 16px 0px 0px;
     display: flex;
+    position: sticky;
     flex-direction: row;
     justify-content: space-between;
     width: 100%;
@@ -200,6 +201,17 @@
     padding-inline-start: 8px;
     color: black;
     transition: 0.3s height ease-in;
+}
+
+.colourinput {
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    align-items: flex-start;
+    margin-left: 40px;
+    justify-content: center;
+    padding: 8px 4px;
+    min-height: 50px;
 }
 
 /* .detailinput:-internal-autofill-selected {
